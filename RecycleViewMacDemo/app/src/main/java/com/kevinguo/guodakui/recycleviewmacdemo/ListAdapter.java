@@ -67,6 +67,31 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
         this.onitermClickLister = onitermClickLister;
     }
 
+    public void add(int position,String value ){
+        if(position>mDatas.size()){
+            position=mDatas.size();
+        }
+        if (position<0){
+            position=0;
+        }
+        mDatas.add(position,value);
+
+        notifyItemInserted(position);
+    }
+
+    public String remove(int position){
+        if (position>mDatas.size()){
+            return null;
+        }
+        if (position<0){
+            return null;
+        }
+        String value = mDatas.remove(position);
+        notifyItemRemoved(position);
+
+        return value;
+    }
+
     interface OnitermClickLister{
         public void OnItemClick(View view,int position);
         public void OnItemLongClick(View view,int position);

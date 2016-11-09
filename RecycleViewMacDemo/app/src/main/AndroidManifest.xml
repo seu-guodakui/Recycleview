@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListLayoutActivity" />
-        <activity android:name=".GridLayoutActivity"></activity>
+        <activity android:name=".GridLayoutActivity" />
+        <activity android:name=".StaggerGridLayoutActivity"></activity>
     </application>
 
 </manifest>

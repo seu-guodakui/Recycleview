@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.staggergrid_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(StaggerGridLayoutActivity.openStaggerGridLayoutActivity(MainActivity.this));
             }
         });
     }
