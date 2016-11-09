@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.grid_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(GridLayoutActivity.openGridLayoutActivity(MainActivity.this));
             }
         });
 
